@@ -12,6 +12,12 @@ public class CalculatorTest extends TestCase {
 		assertTrue(cal.add(3,5)==8);
 	}
 
+	public void testSubstract()
+	{
+		Calculator cal = new Calculator();
+		assertTrue(cal.substract(5,3)==2);
+	}
+
 	public void testMultipy()
 	{
 		Calculator cal = new Calculator();
