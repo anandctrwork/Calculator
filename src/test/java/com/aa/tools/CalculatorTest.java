@@ -1,27 +1,29 @@
 package com.aa.tools;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import junit.framework.TestCase;
-
-public class CalculatorTest extends TestCase {
+public class CalculatorTest {
 	
+	@Test
 	public void testAdd()
 	{
 		Calculator cal = new Calculator();
-		assertTrue(cal.add(3,5)==8);
+		assertTrue(cal.add(3,5)==8, "3 + 5 should equal 8");
 	}
 
+	@Test
 	public void testSubstract()
 	{
 		Calculator cal = new Calculator();
-		assertTrue(cal.substract(5,3)==2);
+		assertTrue(cal.substract(5,3)==2, "5 - 3 should equal 2");
 	}
 
-	public void testMultipy()
+	@Test
+	public void testMultiply() // Corrected method name from testMultipy to testMultiply
 	{
 		Calculator cal = new Calculator();
-		assertTrue(cal.multiply(3,5)==15);
+		assertTrue(cal.multiply(3,5)==15, "3 * 5 should equal 15");
 	}
 
 }
