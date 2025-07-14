@@ -1,1 +1,6 @@
 com\aa\tools\Calculator.class
+com\aa\tools\CalculatorController.class
+com\aa\tools\CalculationResponse.class
+com\aa\tools\MultiplyResponse.class
+com\aa\tools\CalculationRequest.class
+com\aa\CalculatorApplication.class
