@@ -1,27 +1,25 @@
 package com.aa.tools;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
-import junit.framework.TestCase;
-
-public class CalculatorTest extends TestCase {
+public class CalculatorTest {
 	
-	public void testAdd()
-	{
+	@Test
+	public void testAdd() {
 		Calculator cal = new Calculator();
-		assertTrue(cal.add(3,5)==8);
+		assertEquals(8, cal.add(3, 5));
 	}
 
-	public void testSubtract()
-	{
+	@Test
+	public void testSubtract() {
 		Calculator cal = new Calculator();
-		assertTrue(cal.subtract(5,3)==2);
+		assertEquals(2, cal.subtract(5, 3));
 	}
 
-	public void testMultipy()
-	{
+	@Test
+	public void testMultiply() {
 		Calculator cal = new Calculator();
-		assertTrue(cal.multiply(3,5)==15);
+		assertEquals(15, cal.multiply(3, 5));
 	}
-
 }
