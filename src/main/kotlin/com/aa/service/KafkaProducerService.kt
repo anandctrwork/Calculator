@@ -16,7 +16,8 @@ class KafkaProducerService(private val kafkaTemplate: KafkaTemplate<String, Any>
             kafkaTemplate.send(topicName, result)
             logger.info("Sent calculation result to Kafka: $result")
         } catch (e: Exception) {
-            logger.error("Failed to send calculation result to Kafka", e)
+            logger.warn("Kafka not available - calculation result not sent: $result")
+            logger.debug("Kafka error details", e)
         }
     }
 }
